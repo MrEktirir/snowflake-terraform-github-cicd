@@ -49,6 +49,7 @@ resource "snowflake_grant_privileges_to_account_role" "demo_db_usage" {
 resource "snowflake_schema" "demo_schema" {
   database = snowflake_database.demo_db.name
   name     = "DEMO_SCHEMA"
+  comment  = "Managed by Terraform GitHub Actions CI/CD"
 }
 
 resource "snowflake_grant_privileges_to_account_role" "demo_schema_usage" {
